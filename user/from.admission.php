@@ -11,88 +11,10 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<style>
-    a.nav-link {
-        color: #000;
-    }
-
-    .section1 {
-        background-color: rgb(255, 255, 255);
-    }
-
-    .img-fluid {
-        max-width: 10%;
-        height: auto;
-    }
-
-
-
-    .form-container {
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .form-header {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        border-radius: 5px;
-        width: 100%;
-    }
-
-    .btn-submit {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        width: 100%;
-    }
-
-    .btn-submit:hover {
-        background-color: #45a049;
-    }
-</style>
-
-<header class="header " style="background-color: #ecc8ff">
-    <ul class="nav p-3 container">
-        <li class="list-item">
-            <a href="../index.php" class="nav-link ">หน้าหลัก</a>
-        </li>
-        <li class="list-item">
-            <a href="from.addmission.php" class="nav-link  ">สมัครเรียน</a>
-        </li>
-        <li class="list-item">
-            <a href="../index.php" class="nav-link  ">ตรวจสอบ/แก้ไขการสมัคร</a>
-        </li>
-        <li class="list-item">
-            <a href="../index.php" class="nav-link  ">สถิติรับสมัคร</a>
-        </li>
-        <li class="list-item">
-            <a href="../index.php" class="nav-link  ">ติดต่อ</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                เข้าสู่ระบบ
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">นักเรียน</a></li>
-                <li><a class="dropdown-item" href="#">ครู/เจ้าหน้าที่</a></li>
-                <li><a class="dropdown-item" href="#">ผู้ดูแลระบบ</a></li>
-            </ul>
-        </li>
-    </ul>
-</header>
+<?php include("../menu/navbar.php")?>
 
 <body>
-    <form action="user/insert_into.fromaddmission.php" method="post">
+    <form action="insert_into.fromadmission.php" method="post">
         <section class="section1">
             <div class="container form-container">
                 <h2 class="form-header">ฟอร์มสมัครเรียน</h2>
@@ -131,9 +53,19 @@
                         <label><input type="radio" name="gender" value="ชาย" required> ชาย</label>
                         <label><input type="radio" name="gender" value="หญิง"> หญิง</label>
                     </div>
+                    <!-- เลขบัตรประชาชน -->
                     <div class="form-group mb-3">
                         <label for="national_id">เลขบัตรประชาชน:</label><br>
                         <input type="text" class="form-control" id="national_id" name="national_id" required>
+                    </div>
+                    <!-- ระดับชั้นที่จะสมัคร -->
+                    <div class="form-group mb-3">
+                        <label for="class">ระดับชั้นที่จะสมัคร:</label>
+                        <select class="form-control" id="class" name="class" required>
+                            <option value="ม.1">ม.1</option>
+                            <option value="ม.4">ม.4</option>
+                            
+                        </select>
                     </div>
                     <!-- เบอร์โทร -->
                     <div class="form-group mb-3">
