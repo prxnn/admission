@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<?php include("menu/navbar.php")?>
+<?php include("../navbar.php")?>
    
 
     <!-- ส่วนเนื้อหาของหน้าหลัก -->

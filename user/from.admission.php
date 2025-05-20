@@ -11,7 +11,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<?php include("../menu/navbar.php")?>
+<?php include("../navbar.php")?>
 
 <body>
     <form action="insert_into.fromadmission.php" method="post">

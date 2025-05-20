@@ -1,3 +1,8 @@
+  <link rel="stylesheet" href="css/css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   
  <style>
         a.nav-link {
             color: #000;
@@ -70,18 +75,25 @@
         .nav-item.dropdown .dropdown-menu a:hover {
             background-color: #5a3cb2;
         }
+        ul.nav{
+                place-content: center;
+        }
+        * {
+  font-family: 'sarabun', sans-serif;
+
+}
     </style>
      <!-- เมนู -->
     <header class="header">
         <ul class="nav p-3 container">
             <li class="list-item">
-                <a href="../index.php" class="nav-link">หน้าหลัก</a>
+                <a href="../user/index.php" class="nav-link">หน้าหลัก</a>
             </li>
             <li class="list-item">
-                <a href="user/from.admission.php" class="nav-link">สมัครเรียน</a>
+                <a href="../user/from.admission.php" class="nav-link">สมัครเรียน</a>
             </li>
             <li class="list-item">
-                <a href="index.php" class="nav-link">ตรวจสอบ/แก้ไขการสมัคร</a>
+                <a href="../user/edit.fromadmission.php" class="nav-link">ตรวจสอบ/แก้ไขการสมัคร</a>
             </li>
             <li class="list-item">
             
@@ -103,3 +115,6 @@
             </li>
         </ul>
     </header>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
