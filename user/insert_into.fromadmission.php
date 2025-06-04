@@ -1,5 +1,9 @@
 <?php
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 include("../conn.php");
+
 $sex = $_POST["sex"];
 $first_name = $_POST["first_name"];
 $last_name = $_POST["last_name"];
@@ -11,8 +15,10 @@ $phone = $_POST["phone"];
 $address = $_POST["address"];
 $email = $_POST["email"];
 
+
+
 $sql = "INSERT INTO tb_students(stu_sex,stu_first_name,stu_last_name,stu_gender,stu_date_of_birth,stu_national_id,stu_class,stu_phone_number,stu_email,stu_address)
-VALUES('$sex','$first_name','$last_name','$dob','$gender','$national_id','$class','$phone','$address','$email')";
+VALUES('$sex','$first_name','$last_name','$gender','$dob','$national_id','$class','$phone','$email','$address')";
 
 if($conn->query($sql)==TRUE){
     ?> <script>
@@ -20,5 +26,7 @@ if($conn->query($sql)==TRUE){
         window.location.href = '../index.php';
     </script>
     <?php
+}else {
+    echo "Error: " . $conn->error;
 }
 ?>

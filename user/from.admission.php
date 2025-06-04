@@ -14,7 +14,7 @@
 <?php include("../navbar.php")?>
 
 <body>
-    <form action="insert_into.fromadmission.php" method="post">
+    <form action="../user/insert_into.fromadmission.php" method="post">
         <section class="section1">
             <div class="container form-container">
                 <h2 class="form-header">ฟอร์มสมัครเรียน</h2>
@@ -23,8 +23,8 @@
                     <div class="form-group mb-3">
                         <label for="sex">คำนำหน้า:</label>
                         <select class="form-control" id="sex" name="sex" required>
-                            <option value="ประถม">เด็กชาย</option>
-                            <option value="มัธยม">เด็กหญิง</option>
+                            <option value="เด็กชาย">เด็กชาย</option>
+                            <option value="เด็กหญิง">เด็กหญิง</option>
                             <option value="นาย">นาย</option>
                             <option value="นางสาว">นางสาว</option>
                         </select>
@@ -82,7 +82,7 @@
                     <!-- อีเมล -->
                     <div class="form-group mb-3">
                         <label for="email">อีเมล:</label>
-                        <input type="tel" class="form-control" id="email" name="email" required>
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
 
                     <!-- ปุ่มสมัคร -->

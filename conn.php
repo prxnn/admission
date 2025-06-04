@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$bdname ="db_admission";
+$bdname ="db_addmission";
 
 $conn = new mysqli($servername,$username,$password,$bdname);
 if($conn->connect_error){

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>แก้ไขการสมัคร</title>
 </head>
-<?php include("../navbar.php") ?>
+<?php include("../navbar.php"); ?>
 
 <body>
     <div class="container">

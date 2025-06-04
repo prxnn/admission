@@ -87,13 +87,13 @@
     <header class="header">
         <ul class="nav p-3 container">
             <li class="list-item">
-                <a href="../user/index.php" class="nav-link">หน้าหลัก</a>
+                <a href="home.php" class="nav-link">หน้าหลัก</a>
             </li>
             <li class="list-item">
-                <a href="../user/from.admission.php" class="nav-link">สมัครเรียน</a>
+                <a href="from.admission.php" class="nav-link">สมัครเรียน</a>
             </li>
             <li class="list-item">
-                <a href="../user/edit.fromadmission.php" class="nav-link">ตรวจสอบ/แก้ไขการสมัคร</a>
+                <a href="edit.fromadmission.php" class="nav-link">ตรวจสอบ/แก้ไขการสมัคร</a>
             </li>
             <li class="list-item">
             
