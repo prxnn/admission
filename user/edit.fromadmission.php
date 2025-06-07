@@ -1,3 +1,4 @@
+<?php include('../conn.php');    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,32 +15,48 @@
             <h3 class="text-center mt-5 mb-5">ตรวจสอบข้อมูลการสมัครเรียน และ แก้ไขการสมัคร</h3>
         </div>
         <table class="table">
-           
-            <thead >
+
+            <thead>
                 <tr>
                     <th scope="col">ลำดับ</th>
+                    <th scope="col">คำนำหน้า</th>
                     <th scope="col">ชื่อ-นามสกุล</th>
-                    <th scope="col">สถานะการสมัคร</th>
-                    <th scope="col">รอบสมัคร</th>
-                    <th scope="col">สายการเรียน</th>
+                    <th scope="col">เพศ</th>
+                    <th scope="col">ว/ด/ป.เกิด</th>
+                    <th scope="col">เลขบัตรประจำตัวประชาชน</th>
                     <th scope="col">ระดับชั้น</th>
-                    <th scope="col">สถานะรายงานตัว</th>
-                    <th scope="col">สถานะมอบตัว</th>
+                    <th scope="col">เบอร์โทร</th>
+                    <th scope="col">อีเมล</th>
+                     <th scope="col">ที่อยู่</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>spwld</td>
-                </tr>
-                
-            </tbody>
+            <!-- เอาข้อมูลมาใส่ -->
+            <?php
+            $sql = "SELECT * FROM `tb_students`";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["student_id"] . "</td>";
+                    echo "<td>" . $row["stu_sex"] . "</td>";
+                    echo "<td>" . $row["stu_first_name"] . $row["stu_last_name"];
+                  
+                    echo "<td>" . $row["stu_gender"] . "</td>";
+                    echo "<td>" . $row["stu_date_of_birth"] . "</td>";
+                    echo "<td>" . $row["stu_national_id"] . "</td>";
+                    echo "<td>" . $row["stu_class"] . "</td>";
+                    echo "<td>" . $row["stu_phone_number"] . "</td>";
+                    echo "<td>" . $row["stu_email"] . "</td>";
+                    echo "<td>" . $row["stu_address"] . "</td>";
+
+
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='3'>ไม่มีข้อมูล</td></tr>";
+            }
+            ?>
+
         </table>
     </div>
 

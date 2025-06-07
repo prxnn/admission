@@ -11,7 +11,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<?php include("../navbar.php")?>
+<?php include("../navbar.php") ?>
 
 <body>
     <form action="../user/insert_into.fromadmission.php" method="post">
@@ -19,77 +19,78 @@
             <div class="container form-container">
                 <h2 class="form-header">ฟอร์มสมัครเรียน</h2>
                 <!-- คำนำหน้า -->
-                
-                    <div class="form-group mb-3">
-                        <label for="sex">คำนำหน้า:</label>
-                        <select class="form-control" id="sex" name="sex" required>
-                            <option value="เด็กชาย">เด็กชาย</option>
-                            <option value="เด็กหญิง">เด็กหญิง</option>
-                            <option value="นาย">นาย</option>
-                            <option value="นางสาว">นางสาว</option>
-                        </select>
-                    </div>
-                    <!-- ชื่อ -->
-                    <div class="form-group mb-3">
-                        <label for="first_name">ชื่อ:</label>
-                        <input type="text" class="form-control" id="first_name" name="first_name" required>
-                    </div>
 
-                    <!-- นามสกุล -->
-                    <div class="form-group mb-3">
-                        <label for="last_name">นามสกุล:</label>
-                        <input type="text" class="form-control" id="last_name" name="last_name" required>
-                    </div>
+                <div class="form-group mb-3">
+                    <label for="sex">คำนำหน้า:</label>
+                    <select class="form-control" id="sex" name="sex" required>
+                        <option value="เด็กชาย">เด็กชาย</option>
+                        <option value="เด็กหญิง">เด็กหญิง</option>
+                        <option value="นาย">นาย</option>
+                        <option value="นางสาว">นางสาว</option>
+                    </select>
+                </div>
+                <!-- ชื่อ -->
+                <div class="form-group mb-3">
+                    <label for="first_name">ชื่อ:</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" required>
+                </div>
 
-                    <!-- วันเกิด -->
-                    <div class="form-group mb-3">
-                        <label for="dob">วันเกิด:</label>
-                        <input type="date" class="form-control" id="dob" name="dob" required>
-                    </div>
+                <!-- นามสกุล -->
+                <div class="form-group mb-3">
+                    <label for="last_name">นามสกุล:</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name" required>
+                </div>
 
-                    <!-- เพศ -->
-                    <div class="form-group mb-3">
-                        <label for="gender">เพศ:</label><br>
-                        <label><input type="radio" name="gender" value="ชาย" required> ชาย</label>
-                        <label><input type="radio" name="gender" value="หญิง"> หญิง</label>
-                    </div>
-                    <!-- เลขบัตรประชาชน -->
-                    <div class="form-group mb-3">
-                        <label for="national_id">เลขบัตรประชาชน:</label><br>
-                        <input type="text" class="form-control" id="national_id" name="national_id" required>
-                    </div>
-                    <!-- ระดับชั้นที่จะสมัคร -->
-                    <div class="form-group mb-3">
-                        <label for="class">ระดับชั้นที่จะสมัคร:</label>
-                        <select class="form-control" id="class" name="class" required>
-                            <option value="ม.1">ม.1</option>
-                            <option value="ม.4">ม.4</option>
-                            
-                        </select>
-                    </div>
-                    <!-- เบอร์โทร -->
-                    <div class="form-group mb-3">
-                        <label for="phone">เบอร์โทรศัพท์:</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" required>
-                    </div>
+                <!-- วันเกิด -->
+                <div class="form-group mb-3">
+                    <label for="dob">วันเกิด:</label>
+                    <input type="date" class="form-control" id="dob" name="dob" required>
+                </div>
 
-                    <!-- ที่อยู่ -->
-                    <div class="form-group mb-3">
-                        <label for="address">ที่อยู่:</label>
-                        <textarea class="form-control" id="address" name="address" rows="4" required></textarea>
-                    </div>
+                <!-- เพศ -->
+                <div class="form-group mb-3">
+                    <label for="gender">เพศ:</label><br>
+                    <label><input type="radio" name="gender" value="ชาย" required> ชาย</label>
+                    <label><input type="radio" name="gender" value="หญิง"> หญิง</label>
+                </div>
+                <!-- เลขบัตรประชาชน -->
+                <div class="form-group mb-3">
+                    <label for="national_id">เลขบัตรประชาชน:</label><br>
+                    <input type="text" class="form-control" id="national_id" name="national_id" required>
+                </div>
+                <!-- ระดับชั้นที่จะสมัคร -->
+                <div class="form-group mb-3">
+                    <label for="class">ระดับชั้นที่จะสมัคร:</label>
+                    <select class="form-control" id="class" name="class" required>
+                        <option value="ม.1">ม.1</option>
+                        <option value="ม.4">ม.4</option>
 
-                    <!-- อีเมล -->
-                    <div class="form-group mb-3">
-                        <label for="email">อีเมล:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
+                    </select>
+                </div>
+                <!-- เบอร์โทร -->
+                <div class="form-group mb-3">
+                    <label for="phone">เบอร์โทรศัพท์:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <!-- อีเมล -->
+                <div class="form-group mb-3">
+                    <label for="email">อีเมล:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
 
-                    <!-- ปุ่มสมัคร -->
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-submit">ส่งข้อมูลสมัครเรียน</button>
-                    </div>
-                
+                <!-- ที่อยู่ -->
+                <div class="form-group mb-3">
+                    <label for="address">ที่อยู่:</label>
+                    <textarea class="form-control" id="address" name="address" rows="4" required></textarea>
+                </div>
+
+
+
+                <!-- ปุ่มสมัคร -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-outline-success">ส่งข้อมูลสมัครเรียน</button>
+                </div>
+
             </div>
         </section>
     </form>
